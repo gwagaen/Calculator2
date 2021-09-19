@@ -13,7 +13,7 @@ public class cal {
         var1 = st.nextToken();
         varop2 = st.nextToken();
         var3 = st.nextToken();
-        if (var3.contains("8")) {
+        if (var1.contains("X") || var1.contains("I") || var1.contains("V")) {
             Roman roman = new Roman();
             roman.rom1 = var1;
             roman.romop2 = varop2;
