@@ -12,13 +12,14 @@ public class cal {
         op1 = Integer.parseInt(st.nextToken());
         operator = st.nextToken().charAt(0);
         op2 = Integer.parseInt(st.nextToken());
-        
+        if (1 <= op1 && 10 >= op1) {
         float res = 0;
         if (operator == '+') {res=op1+op2;}
         else if (operator == '-') {res=op1-op2;}
         else if (operator == '*') {res=op1*op2;}
         else if (operator == '/') {res=op1/op2;}
         System.out.println(res);
-    }
+        }
+        }
 }
 
