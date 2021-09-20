@@ -1,8 +1,9 @@
 public class RomanToNumber {
     // This function returns
     // value of a Roman symbol
-    int value(char r)
+    int value(char r1)
     {
+        char r = Character.toUpperCase(r1);
         if (r == 'I')
             return 1;
         if (r == 'V')
