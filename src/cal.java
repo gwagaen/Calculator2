@@ -1,18 +1,5 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
-class Roman {
-    public String rom1;
-    public String romop2;
-    public String rom3;
-    char oper = romop2.charAt(0);
-    RomanToNumber rom1c = new RomanToNumber();
-    RomanToNumber rom3c = new RomanToNumber();
-    int sum = rom1c.romanToDecimal(rom1) + oper + rom3c.romanToDecimal(rom3);
-    NumberToRoman sumr = new NumberToRoman ();
-    public String together(){
-        return sumr.intToRoman(sum);
-    }
-}
 public class cal {
     public static void main(String[] args) {
         int op1, op2;
@@ -27,13 +14,28 @@ public class cal {
         varop2 = st.nextToken();
         var3 = st.nextToken();
         if (var1.contains("X") || var1.contains("I") || var1.contains("V")) {
-            Roman rom = new Roman();
-            rom.rom1 = var1;
-            rom.romop2 = varop2;
-            rom.rom3 = var3;
+            char oper = varop2.charAt(0);
+            RomanToNumber rom1c = new RomanToNumber();
+            RomanToNumber rom3c = new RomanToNumber();
+            int a = rom1c.romanToDecimal(var1);
+            int b = rom3c.romanToDecimal(var3);
+            if (1 <= a && 10 >= a && 1 <= b && 10 >= b) {
+                int res1 = 0;
+                if (oper == '+') {
+                    res1 = a + b;
+                } else if (oper == '-') {
+                    res1 = a - b;
+                } else if (oper == '*') {
+                    res1 = a * b;
+                } else if (oper == '/') {
+                    res1 = a / b;
+                }
+                NumberToRoman sumr = new NumberToRoman ();
+                System.out.println(sumr.intToRoman(res1));
+                System.exit(0);
+            }
 
-            System.out.println(rom.together());
-            System.exit(0);
+
         }
 
         op1 = Integer.parseInt(var1);
