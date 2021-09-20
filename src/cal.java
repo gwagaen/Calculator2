@@ -1,6 +1,16 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
 public class cal {
+    public static int math(int x, int y, char z){
+        int res = 0;
+        if (1 <= x && 10 >= x && 1 <= y && 10 >= y) {
+            if (z == '+') {res = x + y;}
+            else if (z == '-') {res = x - y;}
+            else if (z == '*') {res = x * y;}
+            else if (z == '/') {res = x / y;}
+            }
+        return res;
+    }
     public static void main(String[] args) {
         int op1, op2;
         char operator;
@@ -19,28 +29,16 @@ public class cal {
             RomanToNumber rom3c = new RomanToNumber();
             int a = rom1c.romanToDecimal(var1);
             int b = rom3c.romanToDecimal(var3);
-            if (1 <= a && 10 >= a && 1 <= b && 10 >= b) {
-                int res1 = 0;
-                if (oper == '+') {res1 = a + b;}
-                else if (oper == '-') {res1 = a - b;}
-                else if (oper == '*') {res1 = a * b;}
-                else if (oper == '/') {res1 = a / b;}
-                NumberToRoman sumr = new NumberToRoman ();
-                System.out.println(sumr.intToRoman(res1));
-                System.exit(0);
-            }
+            int res1 = math(a, b, oper);
+            NumberToRoman sumr = new NumberToRoman ();
+            System.out.println(sumr.intToRoman(res1));
+            System.exit(0);
         }
         op1 = Integer.parseInt(var1);
         operator = varop2.charAt(0);
         op2 = Integer.parseInt(var3);
-        if (1 <= op1 && 10 >= op1 && 1 <= op2 && 10 >= op2) {
-        float res = 0;
-        if (operator == '+') {res=op1+op2;}
-        else if (operator == '-') {res=op1-op2;}
-        else if (operator == '*') {res=op1*op2;}
-        else if (operator == '/') {res=op1/op2;}
-        System.out.println(res);
-        }
+        int res2 = math(op1, op2, operator);
+        System.out.println(res2);
     }
 }
 
