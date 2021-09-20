@@ -18,6 +18,10 @@ public class cal {
             roman.rom1 = var1;
             roman.romop2 = varop2;
             roman.rom3 = var3;
+
+
+
+
             System.out.println(roman.together());
             System.exit(0);
         }
