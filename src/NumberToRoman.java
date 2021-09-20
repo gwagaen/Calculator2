@@ -3,12 +3,12 @@ public class NumberToRoman {
     {
         // storing roman values of digits from 0-9
         // when placed at different places
-        String m[] = { "", "M", "MM", "MMM" };
-        String c[] = { "",  "C",  "CC",  "CCC",  "CD",
+        String[] m = { "", "M", "MM", "MMM" };
+        String[] c = { "",  "C",  "CC",  "CCC",  "CD",
                 "D", "DC", "DCC", "DCCC", "CM" };
-        String x[] = { "",  "X",  "XX",  "XXX",  "XL",
+        String[] x = { "",  "X",  "XX",  "XXX",  "XL",
                 "L", "LX", "LXX", "LXXX", "XC" };
-        String i[] = { "",  "I",  "II",  "III",  "IV",
+        String[] i = { "",  "I",  "II",  "III",  "IV",
                 "V", "VI", "VII", "VIII", "IX" };
 
         // Converting to roman
@@ -17,8 +17,6 @@ public class NumberToRoman {
         String tens = x[(num % 100) / 10];
         String ones = i[num % 10];
 
-        String ans = thousands + hundereds + tens + ones;
-
-        return ans;
+        return thousands + hundereds + tens + ones;
     }
 }

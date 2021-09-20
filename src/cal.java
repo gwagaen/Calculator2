@@ -14,15 +14,15 @@ public class cal {
         varop2 = st.nextToken();
         var3 = st.nextToken();
         if (var1.contains("X") || var1.contains("I") || var1.contains("V")) {
-            Roman roman = new Roman();
-            roman.rom1 = var1;
-            roman.romop2 = varop2;
-            roman.rom3 = var3;
+            Roman rom = new Roman();
+            rom.rom1 = var1;
+            rom.romop2 = varop2;
+            rom.rom3 = var3;
 
 
 
 
-            System.out.println(roman.together());
+            System.out.println(rom.together());
             System.exit(0);
         }
 
