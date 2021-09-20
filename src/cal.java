@@ -21,23 +21,15 @@ public class cal {
             int b = rom3c.romanToDecimal(var3);
             if (1 <= a && 10 >= a && 1 <= b && 10 >= b) {
                 int res1 = 0;
-                if (oper == '+') {
-                    res1 = a + b;
-                } else if (oper == '-') {
-                    res1 = a - b;
-                } else if (oper == '*') {
-                    res1 = a * b;
-                } else if (oper == '/') {
-                    res1 = a / b;
-                }
+                if (oper == '+') {res1 = a + b;}
+                else if (oper == '-') {res1 = a - b;}
+                else if (oper == '*') {res1 = a * b;}
+                else if (oper == '/') {res1 = a / b;}
                 NumberToRoman sumr = new NumberToRoman ();
                 System.out.println(sumr.intToRoman(res1));
                 System.exit(0);
             }
-
-
         }
-
         op1 = Integer.parseInt(var1);
         operator = varop2.charAt(0);
         op2 = Integer.parseInt(var3);
@@ -50,7 +42,5 @@ public class cal {
         System.out.println(res);
         }
     }
-
-
 }
 
