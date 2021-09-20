@@ -1,5 +1,21 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
+
+class Roman {
+    String rom1;
+    String romop2;
+    String rom3;
+    char operand = romop2.charAt(0);
+    RomanToNumber rom1c = new RomanToNumber();
+    RomanToNumber rom3c = new RomanToNumber();
+    int sum = rom1c.romanToDecimal(rom1) + operand + rom3c.romanToDecimal(rom3);
+    NumberToRoman sumr = new NumberToRoman ();
+    public String together(){
+        return sumr.intToRoman(sum);
+    }
+}
+
+
 public class cal {
     public static void main(String[] args) {
         int op1, op2;
@@ -18,9 +34,6 @@ public class cal {
             rom.rom1 = var1;
             rom.romop2 = varop2;
             rom.rom3 = var3;
-
-
-
 
             System.out.println(rom.together());
             System.exit(0);
