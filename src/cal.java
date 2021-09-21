@@ -52,7 +52,9 @@ public class cal {
             else if (z == '-') {res = x - y;}
             else if (z == '*') {res = x * y;}
             else if (z == '/') {res = x / y;}
+            return res;
         }
+        else System.exit(0);
         return res;
     }
 }
