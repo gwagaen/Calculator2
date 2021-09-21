@@ -31,7 +31,6 @@ public class cal {
             if (res1 < 0) {
                 res1 = Math.abs(res1);
                 String res2 = NumberToRoman.intToRoman(res1);
-
                 System.out.println("-" + res2);
                 System.exit(0);
             }
