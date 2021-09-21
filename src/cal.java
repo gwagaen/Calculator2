@@ -24,7 +24,19 @@ public class cal {
             double a = rom1c.romanToDecimal(var1);
             double b = rom3c.romanToDecimal(var3);
             int res1 = (int)math(a, b, oper);
-            System.out.println(NumberToRoman.intToRoman(res1));
+            if (res1 == 0) {
+                System.out.println(res1);
+                System.exit(0);
+            }
+            if (res1 < 0) {
+                res1 = Math.abs(res1);
+                String res2 = NumberToRoman.intToRoman(res1);
+
+                System.out.println("-" + res2);
+                System.exit(0);
+            }
+            String res2 = NumberToRoman.intToRoman(res1);
+            System.out.println(res2);
             System.exit(0);
         }
         op1 = Integer.parseInt(var1);
